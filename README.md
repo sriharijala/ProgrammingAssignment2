@@ -103,3 +103,72 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+### Testing
+
+##### A test script is test/testMatrix.R is available to test & confirm the functionality
+
+###### Test Results
+
+> newMatrix <-makeCacheMatrix(matrix(c(1,2,3,0,1,4,5,6,0),3,3))
+> 
+> newMatrix$get()
+     [,1] [,2] [,3]
+[1,]    1    0    5
+[2,]    2    1    6
+[3,]    3    4    0
+> 
+> newMatrix$getInverse()
+NULL
+> 
+> cacheSolve(newMatrix)
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
+> 
+> cacheSolve(newMatrix)
+getting cached data
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
+> 
+> newMatrix$getInverse()
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
+> 
+> newMatrix$set(matrix(c(1,0,5,2,1,6,3,4,0),3,3))
+> 
+> newMatrix$get()
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    0    1    4
+[3,]    5    6    0
+> 
+> newMatrix$getInverse()
+NULL
+> 
+> cacheSolve(newMatrix)
+     [,1] [,2] [,3]
+[1,]  -24   18    5
+[2,]   20  -15   -4
+[3,]   -5    4    1
+> 
+> cacheSolve(newMatrix)
+getting cached data
+     [,1] [,2] [,3]
+[1,]  -24   18    5
+[2,]   20  -15   -4
+[3,]   -5    4    1
+> 
+> newMatrix$getInverse()
+     [,1] [,2] [,3]
+[1,]  -24   18    5
+[2,]   20  -15   -4
+[3,]   -5    4    1
+> 
+
+
