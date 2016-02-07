@@ -110,6 +110,7 @@ This assignment will be graded via peer assessment.
 
 ###### Test Results
 
+```
 > newMatrix <-makeCacheMatrix(matrix(c(1,2,3,0,1,4,5,6,0),3,3))
 > 
 > newMatrix$get()
@@ -170,5 +171,5 @@ getting cached data
 [2,]   20  -15   -4
 [3,]   -5    4    1
 > 
-
+```
 

@@ -1,7 +1,7 @@
 ## This is a a test script to test the cacheMatrix. 
 ## It can be run as backgound R commnad with output to redirected to testOutput.log
 ##
-## R CMD BATCH testMatrix.R > testOutput.log
+## R CMD BATCH testMatrix.R
 
 source("../cacheMatrix.R")
 
